@@ -11,7 +11,7 @@
 }
 
 
-header, section, footer {
+header, .lnb, .ad, .con, footer {
     border-radius: 10px;
 }
 
@@ -23,4 +23,53 @@ header {
 footer {
     height: 100px;
     background-color: brown;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+
+}
+
+section > .left{
+    width: 25%;
+    height: 400px;
+}
+
+section > .left> .lnb{
+    height: 250px;
+    margin-bottom: 10px;
+    background-color: blue;
+}
+
+section > .left> .ad{
+    height: 140px;
+    background-color: pink;
+}
+
+section > .con{
+    width: 74%;
+    background-color: yellow;
+}
+
+@media screen and (max-width:640px) {
+    #wrap {
+        width: 100%;
+        margin: 0;
+    }
+
+    section{
+        display: block;
+
+    }
+
+    section > .left {
+        width: 100%;
+    }
+
+    section > .con {
+        margin-top: 10px;
+        width: 100%;
+    }
 }
